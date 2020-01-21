@@ -52,6 +52,20 @@ function App() {
    }
    console.log(charge,amount);
   }
+
+  //clear all items
+  const clearItems = ()=>{
+    console.log("clear all items");
+  }
+  //handle delete
+  const handleDelete = (id)=>{
+    console.log(`item deleted: ${id}`);
+  }
+
+  const handleEdit = (id)=>{
+    console.log(`item edited: ${id}`)
+  }
+
   return (
     <>
     {alert.show && <Alert
@@ -67,7 +81,11 @@ function App() {
     handleCharge={handleCharge}
     handleSubmit={handleSubmit}/>
 
-    <ExpenseList expenses={expenses}/>   
+    <ExpenseList 
+    expenses={expenses}
+    clearItems={clearItems}
+    handleDelete={handleDelete}
+    handleEdit={handleEdit}/>   
     </main>
     <h1>
       total spending: <span className="total">
