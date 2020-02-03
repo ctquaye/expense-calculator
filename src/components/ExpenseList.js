@@ -2,7 +2,11 @@ import React from 'react'
 import  Item from './ExpenseItem'
 import {MdDelete} from 'react-icons/md'
 
-export const ExpenseList = ({expenses,handleEdit, handleDelete, clearItems}) => {
+export const ExpenseList = ({
+    expenses,
+    handleEdit,
+    handleDelete,
+    clearItems}) => {
     return (
         <>
             <ul className="list">
